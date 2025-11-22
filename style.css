@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "helvetica neue";
+  color: white;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+body h1 {
+  font-size: 80px;
+  background-color: rgba(229, 229, 111, 0.101);
+  padding: 20px 80px;
+  border-radius: 10px;
+  font-family: monospace;
+  position: absolute;
+  display: flex;
+  z-index: 8;
+  color: rgb(21, 17, 17);
+  box-shadow: 0 0 10px rgba(22, 22, 22, 0.2);
+}
+body h2 {
+  height: 40px;
+  position: absolute;
+  margin: 100px;
+  font-size: 40px;
+  z-index: 8;
+  font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  color: rgba(186, 186, 230, 0.5450980392);
+  animation: glow 0.9s linear infinite alternate;
+}
+body video {
+  position: fixed;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+body .title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+body .subtitle {
+  margin-bottom: 20px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+body .piano {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+body .key {
+  background-color: transparent;
+  width: 50px;
+  border: 3px solid #334155;
+  padding: 20px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.1s;
+  text-align: center;
+  z-index: 8;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+body .key:hover {
+  background: #334155;
+}
+body .key.active {
+  transform: translateY(-6px);
+  background: #22d3ee;
+  box-shadow: 0 0 15px #22d3ee;
+  color: black;
+}
+body .key span {
+  font-size: 18px;
+  font-weight: bold;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0px 0px 5px rgba(193, 193, 177, 0.97), 0px 0px 10px #000;
+  }
+  to {
+    text-shadow: 0px 0px 2px rgba(227, 12, 12, 0.97), 0px 0px 25px #000;
+  }
+}/*# sourceMappingURL=style.css.map */
